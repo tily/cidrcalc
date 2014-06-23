@@ -1,0 +1,44 @@
+<!-- Template for Cidr View -->
+<table id="cidr" class="table" style="margin-top: 25px;">
+	<tr>
+		<td>起点となるアドレス</td>
+		<td><%- address.toString(10) %></td>
+		<td><%- address.toString(2, {padding: 8}) %></td>
+		<td><button class="btn btn-primary btn-xs play play-address"><span class="glyphicon glyphicon-volume-up play-address"></span></button></td>
+	</tr>
+	<tr>
+		<td>ネットマスク</td>
+		<td><%- netmask.toString(10) %></td>
+		<td><%- netmask.toString(2, {padding: 8}) %></td>
+		<td><button class="btn btn-primary btn-xs play play-netmask"><span class="glyphicon glyphicon-volume-up play-netmask"></span></button></td>
+	</tr>
+	<tr>
+		<td>サブネット</td>
+		<td><%- address.network(netmask.toPrefix()).toString(10) %>/<%- netmask.toPrefix() %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ネットワーク</td>
+		<td><%- address.network(netmask.toPrefix()).toString(10) %></td>
+		<td><%- address.network(netmask.toPrefix()).toString(2, {padding: 8}) %></td>
+		<td><button class="btn btn-primary btn-xs play play-network"><span class="glyphicon glyphicon-volume-up play-network"></span></button></td>
+	</tr>
+	<tr>
+		<td>ホストのレンジ</td>
+		<td>
+			<%- address.fromInteger(address.network(netmask.toPrefix()).get('integer') + 1).toString() %>
+			-
+			<%- address.fromInteger(address.broadcast(netmask.toPrefix()).get('integer') - 1).toString() %>
+		        (<%- address.broadcast(netmask.toPrefix()).get('integer') - address.network(netmask.toPrefix()).get('integer') - 1 %>個)
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ブロードキャスト</td>
+		<td><%- address.broadcast(netmask.toPrefix()).toString(10) %></td>
+		<td><%- address.broadcast(netmask.toPrefix()).toString(2, {padding: 8}) %></td>
+		<td><button class="btn btn-primary btn-xs play play-broadcast"><span class="glyphicon glyphicon-volume-up play-broadcast"></span></button></td>
+	</tr>
+</table>

@@ -1,0 +1,37 @@
+<!-- Template for App View -->
+<div class="container">
+	<h1>(きこえる) CIDR アドレス計算ツール <small>by tily</small></h1>
+	<p>今さらな感じのツールですｗ</p>
+	<form class="form-inline" role="form">
+		<label for="address">起点となるアドレス</label>
+		<div class="form-group">
+			<input type="text" placeholder="BASE ADDRESS" class="form-control" id="address" value="<%- address.toString(10) %>" />
+		</div>
+		/
+		<label>ネットマスク</label>
+		<div class="form-group">
+			<select class="form-control" id="netmask">
+			<% for(i = 0; i <= 32; i++) { %>
+				<% if(netmask.toPrefix() == i) { %>
+					<option value="<%- i %>" selected><%- address.fromPrefix(i).toString(10) %></option>
+				<% } else { %>
+					<option value="<%- i %>"><%- address.fromPrefix(i).toString(10) %></option>
+				<% } %>
+			<% } %>
+			</select>
+			or
+			<select class="form-control" id="netmask-prefix">
+			<% for(i = 0; i <= 32; i++) { %>
+				<% if(netmask.toPrefix() == i) { %>
+					<option value="<%- i %>" selected><%- i %></option>
+				<% } else { %>
+					<option value="<%- i %>"><%- i %></option>
+				<% } %>
+			<% } %>
+			</select>
+		</div>
+	</form>
+
+	<div id="cidr">
+	</div>
+</div>

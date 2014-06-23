@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>KSS: Living Styleguide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/all-less.css">
+
+</head>
+<body><div id="kss-wrapper">
+  <div id="kss-nav">
+    <header id="kss-header">
+      <hgroup><h1>Styleguide</h1></hgroup>
+    </header>
+    <aside>
+      <nav><ul>
+        <li><a href="index.html">0. Overview</a></li>
+        
+          <li><a href="section-1.html">1. Button</a></li>
+        
+      </ul></nav>
+    </aside>
+  </div>
+  <div role="main" id="kss-main">
+    <article id="kss-content">
+      
+
+        
+        
+          <section class="kss-depth-1">
+          
+            <h1 class="kss-title"><span class="kss-ref">1.0</span> - Button</h1>
+          
+            
+              <div class="kss-box">
+                <p>Buttons are action items.</p>
+
+                <ul>
+                
+                  <li>
+                    <span class="bold">:hover</span> - <p>Highlight the button</p>
+
+                  </li>
+                
+                  <li>
+                    <span class="bold">:active</span> - <p>&quot;Press&quot; the button down when clicked.</p>
+
+                  </li>
+                
+                  <li>
+                    <span class="bold">.info</span> - <p>Indicate information</p>
+
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="kss-examples">
+                <div class="kss-example">
+                  <div class="kss-example-markup">
+                    <a href="#" class="button {$modifiers}">Link Button</a>
+<button class="button {$modifiers}">Button Element</button>
+<input type="button" class="button {$modifiers}" value="Input Element"/>
+                  </div>
+                </div>
+              
+                <div class="kss-example">
+                  <div class="kss-example-markup">
+                    <a href="#" class="button pseudo-class-hover">Link Button</a>
+<button class="button pseudo-class-hover">Button Element</button>
+<input type="button" class="button pseudo-class-hover" value="Input Element"/>
+                  </div>
+                  <div class="kss-example-modifier">
+                    :hover
+                  </div>
+                </div>
+              
+                <div class="kss-example">
+                  <div class="kss-example-markup">
+                    <a href="#" class="button pseudo-class-active">Link Button</a>
+<button class="button pseudo-class-active">Button Element</button>
+<input type="button" class="button pseudo-class-active" value="Input Element"/>
+                  </div>
+                  <div class="kss-example-modifier">
+                    :active
+                  </div>
+                </div>
+              
+                <div class="kss-example">
+                  <div class="kss-example-markup">
+                    <a href="#" class="button info">Link Button</a>
+<button class="button info">Button Element</button>
+<input type="button" class="button info" value="Input Element"/>
+                  </div>
+                  <div class="kss-example-modifier">
+                    .info
+                  </div>
+                </div>
+              
+              </div>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html">&lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
+&lt;button class=&quot;button {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button {$modifiers}&quot; value=&quot;Input Element&quot;/&gt;</pre>
+              </div>
+            
+          </section>
+        
+          <section class="kss-depth-2">
+          
+            <h1 class="kss-title"><span class="kss-ref">1.1</span> - Button corners</h1>
+          
+            
+              <div class="kss-box">
+                <p>Buttons can be as rounded as desired.</p>
+
+                <ul>
+                
+                  <li>
+                    <span class="bold">.curved</span> - <p>Indicate slightly rounded buttons</p>
+
+                  </li>
+                
+                  <li>
+                    <span class="bold">.rounded</span> - <p>Indicated circular buttons</p>
+
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="kss-examples">
+                <div class="kss-example">
+                  <div class="kss-example-markup">
+                    <a href="#" class="button {$modifiers}">Link Button</a>
+<button class="button {$modifiers}">Button Element</button>
+<input type="button" class="button {$modifiers}" value="Input Element"/>
+                  </div>
+                </div>
+              
+                <div class="kss-example">
+                  <div class="kss-example-markup">
+                    <a href="#" class="button curved">Link Button</a>
+<button class="button curved">Button Element</button>
+<input type="button" class="button curved" value="Input Element"/>
+                  </div>
+                  <div class="kss-example-modifier">
+                    .curved
+                  </div>
+                </div>
+              
+                <div class="kss-example">
+                  <div class="kss-example-markup">
+                    <a href="#" class="button rounded">Link Button</a>
+<button class="button rounded">Button Element</button>
+<input type="button" class="button rounded" value="Input Element"/>
+                  </div>
+                  <div class="kss-example-modifier">
+                    .rounded
+                  </div>
+                </div>
+              
+              </div>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html">&lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
+&lt;button class=&quot;button {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button {$modifiers}&quot; value=&quot;Input Element&quot;/&gt;</pre>
+              </div>
+            
+          </section>
+        
+      
+    </article>
+  </div>
+  <footer>
+    
+  </footer>
+  <!-- SCRIPTS -->
+  <script src="public/kss.js"></script>
+  <script src="public/prettify.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var sidebarAdjust = function() {
+        // Match footer/body height
+        var height = Math.max($(window).height(), $('#kss-main').height());
+
+        if ($(window).width() <= 768) {
+          $('#kss-main, #kss-nav').height('auto');
+        } else {
+          $('#kss-main, #kss-nav').height(height);
+        }
+      };
+
+      $(window).resize(sidebarAdjust);
+      $(window).scroll(sidebarAdjust);
+      sidebarAdjust();
+
+      // Ensure code blocks are highlighted properly...
+      $('pre>code').addClass('prettyprint');
+      prettyPrint();
+
+    });
+  </script>
+</div></body>
+</html>

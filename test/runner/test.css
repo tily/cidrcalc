@@ -1,0 +1,29 @@
+body {
+	padding: 0;
+}
+
+.mocha {
+	display: block;
+	padding: 60px;
+	margin: 0;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: 10000;
+
+	background-color: white;
+}
+
+.mocha .progress {
+	height: 40px;
+	width: 40px;
+}
+
+h2, 
+.mocha li {
+	line-height: 12px;
+}

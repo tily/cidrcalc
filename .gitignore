@@ -1,0 +1,5 @@
+node_modules/
+.tmp/
+app/components/
+.sass-cache/
+dist/

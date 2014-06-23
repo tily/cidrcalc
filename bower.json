@@ -1,0 +1,26 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "backbone": "~1.0.0",
+    "requirejs": "*",
+    "raphael": "~2.1.1",
+    "modernizr": "~2.6.2",
+    "bootstrap": "~2.3.2",
+    "bootstrap": "~3.0.0",
+    "requirejs-text": "~2.0.5",
+    "requirejs-domready": "~2.0.1",
+    "underscore": "~1.4.4",
+    "requirejs-youtube-player": "*",
+    "EventEmitter.js": "*",
+    "seiyria-bootstrap-slider": "*"
+  },
+  "devDependencies": {
+    "chai": "~1.7.2",
+    "chai-backbone": "latest",
+    "chai-jquery": "~1.1.1",
+    "sinon-chai": "~2.4.0",
+    "mocha": "~1.12.0"
+  }
+}
