@@ -31,17 +31,21 @@ define [
       val = @$(e.target).val()
       if val.match(@addressRegexp)
         @address.set 'integer', @address.fromString(val).get('integer')
-        location.hash = @address.toString(10) + '/' + @netmask.toPrefix()
+        @applyToLocationHash()
 
     changeNetmask: (e)->
       val = @$(e.target).val()
       @$('#netmask-prefix').val(val)
       @$('#netmask').val(val)
       @netmask.set 'integer', @address.fromPrefix(val).get('integer')
+      @applyToLocationHash()
 
     render: ->
       @$el.html _.template(tpl, {address: @address, netmask: @netmask})
       @cidrView = new CidrView(address: @address, netmask: @netmask)
       @$('#cidr').append(@cidrView.render())
+
+    applyToLocationHash: ()->
+      location.hash = @address.toString(10) + '/' + @netmask.toPrefix()
 
   appView = new App()
